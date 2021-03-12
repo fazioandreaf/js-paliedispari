@@ -19,24 +19,32 @@ function es1() {
     console.log(parola,parolaArr)
 }
 function es2() {
-    // var numero= parseInt(prompt('Scegli un numero da 1 a 6'));
-    // var nPC= Math.floor(Math.random()*6); 
-    // console.log (nPC);
-    // var nTot= nPC + numero;
-    // alert('La somme tra ' + numero + ' e ' + nPC + ' = ' + nTot);
     var scelta= prompt('pari o dispari');
     if(scelta=== 'pari') {
         scelta=true;
-        console.log(scelta)
     }else if (scelta=== 'dispari') {
         scelta=false;
-        console.log(scelta)
     }else{
-        alert( 'non hai scritto bene: riprova scrivendo <pari> o <dispari> minuscolo')
+        alert( 'Non hai scritto bene: riprova scrivendo <pari> o <dispari> minuscolo')
+        return;
     } 
-    console.log(scelta)
-    var sceltaPC= Boolean(Math.random()>0.5)
-    console.log(sceltaPC,scelta)
-
-
+    console.log(scelta) 
+    var numero= parseInt(prompt('Scegli un numero da 1 a 5'));
+    var nPC= Math.floor(Math.random()*5); 
+    console.log (nPC);
+    var nTot= nPC + numero;
+    var vincitore;
+    var vincitoreNome= '';
+    if(nTot%2==0){
+        vincitore=true;
+    } else {
+        vincitore=false;
+    }
+    if (vincitore===scelta){
+        vincitoreNome='Hai vinto!'
+    }else {
+        vincitoreNome='Hai perso...'
+    }
+    console.log (vincitore);
+    alert('La somme tra ' + numero + ' e ' + nPC + ' = ' + nTot + vincitoreNome);
 }
