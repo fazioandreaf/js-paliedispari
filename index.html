@@ -23,11 +23,23 @@ vinto. -->
     body {
       background-color:lightblue;
     }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+    .container input {
+        flex-grow:0.2;
+    }
   </style>
 
 <body>
-     <script src="js/main.js">
-     
-    </script>
+    <div class="container">
+
+        <input type="button" value="Es1" onclick="es1()">
+        <input type="button" value="Es2" onclick="es2()">
+    </div>
+     <script src="js/main.js"></script>
 </body>
 </html>
