@@ -24,8 +24,8 @@ function es2() {
     }else if (scelta=== 'dispari') {
         scelta=false;
     }else{
-        alert( 'Non hai scritto bene: riprova scrivendo <pari> o <dispari> minuscolo')
-        return;
+        return alert( 'Non hai scritto bene: riprova scrivendo <pari> o <dispari> minuscolo')
+        
     } 
     console.log(scelta) 
     var numero= parseInt(prompt('Scegli un numero da 1 a 5'));
@@ -45,9 +45,9 @@ function es2() {
         vincitore=false;
     }
     if (vincitore===scelta){
-        vincitoreNome='Hai vinto!'
+        vincitoreNome=' Hai vinto!'
     }else {
-        vincitoreNome='Hai perso...'
+        vincitoreNome=' Hai perso...'
     }
     console.log (vincitore);
     alert('La somme tra ' + numero + ' e ' + nPC + ' = ' + nTot + vincitoreNome);
